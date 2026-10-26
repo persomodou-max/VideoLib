@@ -1,0 +1,47 @@
+name: videolib
+description: VidéoLib - Lecteur vidéo local moderne et élégant
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # ── Lecteur vidéo (libs Android uniquement)
+  media_kit: ^1.1.11
+  media_kit_video: ^1.2.4
+  media_kit_libs_android_video: ^1.0.4   # Android only — évite d'embarquer iOS/Win/macOS
+
+  # ── Accès aux médias et fichiers
+  permission_handler: ^11.3.1
+  path_provider: ^2.1.4
+  path: ^1.9.0
+
+  # ── Base de données locale
+  sqflite: ^2.3.3+1
+  shared_preferences: ^2.3.2
+
+  # ── Navigation & état
+  go_router: ^14.6.2
+  provider: ^6.1.2
+  intl: ^0.20.0
+
+  # ── Contrôle de luminosité
+  screen_brightness: ^2.1.11
+
+  # ── Icônes Material
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true

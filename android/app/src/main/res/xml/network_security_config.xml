@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    VidéoLib network security config.
+    L'application est 100 % locale — aucune connexion réseau sortante.
+    On bloque tout trafic HTTP en clair pour la sécurité.
+-->
+<network-security-config>
+    <!-- Aucune connexion réseau autorisée en clair (HTTP) -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <!-- Uniquement les CA système, pas de CA utilisateur -->
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+</network-security-config>
